@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: tour-aggregator
+tour-operator:
+  one:
+    service:
+      enabled: true
+      url: https://my-json-server.typicode.com/TarasVovk669/samples/operator-one-response
+      credentials:
+        username: user123
+        password: pass123
+  two:
+    service:
+      enabled: true
+      url: http://localhost:8091/graphql
+      api-key: 11d1de45-5743-4b58-9e08-f6038fe05c8f
