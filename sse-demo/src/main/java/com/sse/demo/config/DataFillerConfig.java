@@ -28,7 +28,7 @@ public class DataFillerConfig implements CommandLineRunner {
     public void run(String... args) throws Exception {
         Flux.range(1, 1000)
                 .delayElements(Duration.ofSeconds(1))
-                .map(i -> getRandomCryptoTransaction())
+                .map(element -> getRandomCryptoTransaction())
                 .flatMap(dto -> this.service.saveTransaction(Mono.just(dto)))
                 .subscribe();
     }
